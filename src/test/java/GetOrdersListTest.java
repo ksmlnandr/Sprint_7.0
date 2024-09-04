@@ -9,8 +9,8 @@ import settings.Steps;
 
 public class GetOrdersListTest {
 
-    public RestClient restClient = new RestClient();
-    public Steps step = new Steps();
+    private RestClient restClient = new RestClient();
+    private Steps step = new Steps();
 
     @Before
     public void setUp() { RestAssured.baseURI = restClient.getBaseUrl(); }

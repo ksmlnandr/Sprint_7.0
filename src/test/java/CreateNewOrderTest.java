@@ -6,12 +6,12 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import settings.RestClient;
 import settings.Steps;
-import settings.order_response_body.OrderCreationBodyData;
+import settings.order.OrderCreationBodyData;
 
 @RunWith(Parameterized.class)
 public class CreateNewOrderTest {
-    public RestClient restClient = new RestClient();
-    public Steps step = new Steps();
+    private RestClient restClient = new RestClient();
+    private Steps step = new Steps();
 
     private final String[] color;
     public CreateNewOrderTest(String[] color) {

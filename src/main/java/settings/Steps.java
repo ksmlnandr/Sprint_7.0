@@ -2,10 +2,10 @@ package settings;
 
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
-import settings.order_response_body.OrderCreationBodyData;
+import settings.order.OrderCreationBodyData;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.Matchers.*;
 
 public class Steps {
 
@@ -84,7 +84,7 @@ public class Steps {
 
     @Step("Получено ожидаемое сообщение об ошибке в теле ответа")
     public void compareExpectedErrorMessageToFactual(Response response, String message) {
-        response.then().assertThat().body("message",equalTo(message));
+        response.then().assertThat().body("message", equalTo(message));
     }
 
     @Step("Тело ответа содержит ожидаемое значение")

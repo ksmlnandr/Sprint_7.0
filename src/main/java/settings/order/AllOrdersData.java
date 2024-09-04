@@ -1,4 +1,4 @@
-package settings.order_response_body;
+package settings.order;
 
 import java.util.List;
 
